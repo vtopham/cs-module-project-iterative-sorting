@@ -27,10 +27,38 @@ def selection_sort(arr):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    # Your code here
+    # RECURSIVE SOLUTION
+    # swapped = 0
+    # for i in range(0, len(arr) - 1):
+    #     #if the one on the left is bigger...
+    #     if arr[i] > arr[i + 1]:
+    #         #swap!
+    #         bigger = arr[i]
+    #         arr[i] = arr[i + 1]
+    #         arr[i + 1] = bigger
+    #         swapped = 1
+    # if swapped:
+    #     return bubble_sort(arr)
+    # else:
+    #     return arr
 
-
+    #ITERATIVE SOLUTION
+    swapped = 1
+    while swapped:
+        swapped = 0
+        for i in range(0, len(arr) - 1):
+            #if the one on the left is bigger...
+            if arr[i] > arr[i + 1]:
+                #swap!
+                bigger = arr[i]
+                arr[i] = arr[i + 1]
+                arr[i + 1] = bigger
+                swapped = 1
+    
     return arr
+
+     
+ 
 
 '''
 STRETCH: implement the Count Sort function below
